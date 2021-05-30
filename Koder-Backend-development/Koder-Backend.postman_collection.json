@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "25dbbc10-6ce1-4100-bae1-eb9e1bc48e08",
+		"name": "Koder-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FetchFees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "85Ul99ZbfgRgfglRRHXzjbJyIlrbDTp77cmRoHv6ODY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/fees?registration_number=04303404300403",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"fees"
+					],
+					"query": [
+						{
+							"key": "registration_number",
+							"value": "04303404300403"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchFees Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "85Ul99ZbfgRgfglRRHXzjbJyIlrbDTp77cmRoHv6ODY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/fees?registration_number=04303404300403",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"fees"
+					],
+					"query": [
+						{
+							"key": "registration_number",
+							"value": "04303404300403"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"feeDueId\": \"2\",\n\"transactionReference\": \"9009888877\",\n\"isCard\": 0,\n\"transactionStatusId\": \"5\",\n\"merchantId\": \"1\",\n\"merchantCardTerminalId\": \"1\",\n\"merchantWalletTerminalId\": \"1\",\n\"paidBy\": \"1\",\n\"payerWalletNo\": \"0099908888\",\n\"payerWalletTelco\": \"MTN\",\n\"payerCardNo\": \"2002039239\",\n\"payerNameOnCard\": \"AKE\",\n\"payerCardExpiry\": \"jjjjj\",\n\"processorPaymentReference\": \"20202929\",\n\"processorStatusCode\": \"92992929\",\n\"processorStatusMsg\": \"0209hwh\",\n\"amount\": \"100\",\n\"comment\": \"Just\",\n\"refunded\": \"0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTransaction-Refactored",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"fee_id\": \"2\",\n\"is_card\": true,\n\"merchant_id\": \"1\",\n\"merchant_card_terminal_id\": \"1\",\n\"merchant_wallet_terminal_id\": \"1\",\n\"paid_by\": \"1\",\n\"payer_wallet_no\": \"0099908888\",\n\"payer_wallet_telco\": \"MTN\",\n\"payer_card_no\": \"2002039239\",\n\"payer_name_on_card\": \"AKE\",\n\"payer_card_expiry\": \"jjjjj\",\n\"payer_cvv\":\"\",\n\"amount\": \"100\",\n\"ccy\": \"Just\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTransaction-Refactored Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "U2FsdGVkX18bFJ7b95EDsCxRdmog8+nTpA67zOQNQHMmk92ZNGhysLSQIAsgdzoWo+Pw/wED2Dz9AzfFatRIKzvZVXuz8VQyQmQv1NMw8oCAwxUJBiYlsQ9rJgEyPgQN/VdW4h5egAfIQUwhEuYnPM7ZHL7YEKZxzeZLsiZ+6Uz/R6AZ/HT2Hgfy5X3",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostWalletTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"fee_id\": \"2\",\n\"is_card\": 0,\n\"merchant_id\": \"1\",\n\"merchant_wallet_terminal_id\": \"1\",\n\"paid_by\": \"1\",\n\"payer_wallet_no\": \"0099908888\",\n\"payer_wallet_telco\": \"MTN\",\n\"amount\": \"100\",\n\"ccy\": \"GHS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCardTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"fee_id\": \"2\",\n\"is_card\": 0,\n\"merchant_id\": \"1\",\n\"merchant_wallet_terminal_id\": \"1\",\n\"paid_by\": \"1\",\n\"payer_wallet_no\": \"0099908888\",\n\"payer_wallet_telco\": \"MTN\",\n\"amount\": \"100\",\n\"ccy\": \"GHS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/transactions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"transactions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostRefund",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"transaction_payment_id\":\"1\",\n\"currency\":\"GHS\",\n\"reason\":\"Mistake\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/refunds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"refunds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"surname\":\"James\",\n\"middle_name\":\"Akua\",\n\"first_name\":\"Donkor\",\n\"username\":\"D900Uee11\",\n\"password\":\"23020302\",\n\"phone\":\"0299002020\",\n\"email\":\"llssl@dls.com\",\n\"user_type_id\":\"2\",\n\"address\":{\n \"line_1\":\"djjjjjjjjd\",\n  \"line_2\":\"djjjjjjjjd\",\n   \"city\": \"accra\",\n   \"postcode\":\"ddd\",\n    \"state\":\"ddd\",\n     \"country\":\"Ghana\"\n},\n\"student_details\":{\n      \"registration_number\":\"00232929\",\n      \"class\":\"SS1\",\n      \"semester\":\"2\",\n      \"program_start_date\":\"2018-02-01\",\n      \"program_end_date\":\"2018-02-01\",\n      \"department_id\":\"1\",\n      \"status\":\"ACTIVE\"\n}\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\":\"D900Uee11\",\n\"password\":\"23020302\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/koder/api/v1.0/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"koder",
+						"api",
+						"v1.0",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mastercard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"merchant_payment_transfer\": {\n    \"transfer_reference\": \"PAYMENT123456\",\n    \"payment_type\": \"P2M\",\n    \"amount\": \"5300\",\n    \"currency\": \"USD\",\n    \"sender_account_uri\": \"pan:5299920000000149;exp=2022-08;cvc=123\",\n    \"digital_account_reference_number\": \"pan:5234568000001234\",\n    \"sender\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"date_of_birth\": \"1999-12-30\",\n      \"address\": {\n        \"line1\": \"123 Elm St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"OFallon\",\n        \"country_subdivision\": \"IL\",\n        \"postal_code\": \"60618\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\"\n    },\n    \"additional_message\": \"DEV123456\",\n    \"funding_source\": \"DEBIT\",\n    \"participation_id\": \"TERMINAL34728\",\n    \"recipient_account_uri\": \"pan:5299920210000277;exp=2077-08;cvc=123\",\n    \"recipient\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"address\": {\n        \"line1\": \"435 Tucker St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"St. Louis\",\n        \"country_subdivision\": \"MO\",\n        \"postal_code\": \"63368\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\",\n      \"additional_merchant_data\": {\n        \"payment_facilitator_id\": \"123456\",\n        \"sub_merchant_id\": \"A1234\"\n      },\n      \"merchant_category_code\": \"0763\"\n    },\n    \"payment_origination_country\": \"USA\",\n    \"reconciliation_data\": {\n      \"custom_field\": [\n        {\n          \"name\": \"TransactionID\",\n          \"value\": \"456FDWBS43\"\n        }\n      ]\n    },\n    \"channel\": \"WEB\",\n    \"device_id\": \"DEV123456\",\n    \"location\": \"state:MO\",\n    \"transaction_local_date_time\": \"2016-09-22T13:22:11-05:30\",\n    \"participant\": {\n      \"card_acceptor_id\": \"CardAcceptor1\",\n      \"card_acceptor_name\": \"THE BEST BANK\"\n    },\n    \"funding_transaction_reference\": {\n      \"network\": \"MASTERCARD\",\n      \"reference_number\": \"0000000000592087939\"\n    },\n    \"mastercard_assigned_id\": \"111111\",\n    \"routing_transit_number\": \"965730000\",\n    \"processor_id\": \"2147483647\",\n    \"token_cryptogram\": {\n      \"type\": \"CONTACTLESS_CHIP\",\n      \"value\": \"jjoutwsdgfdou124354ljlsdhgout968957\",\n      \"pan_sequence_number\": \"011\"\n    },\n    \"authentication_value\": \"ucaf: jJJLtQa+Iws8AREAEbjsA1MAAAA\",\n    \"qr_data\": \"Q1Q2Q3\",\n    \"convenience_amount\": \"11\",\n    \"convenience_indicator\": \"02\",\n    \"interchange_rate_designator\": \"QR\"\n  }\n}\n\n\n//Keystore password: keystorepassword\n//Key alias: keyalias\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox.api.mastercard.com/send/v1/partners/ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo/merchant/transfers/payment",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"mastercard",
+						"com"
+					],
+					"path": [
+						"send",
+						"v1",
+						"partners",
+						"ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo",
+						"merchant",
+						"transfers",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visacard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"merchant_payment_transfer\": {\n    \"transfer_reference\": \"PAYMENT123456\",\n    \"payment_type\": \"P2M\",\n    \"amount\": \"5300\",\n    \"currency\": \"USD\",\n    \"sender_account_uri\": \"pan:5299920000000149;exp=2022-08;cvc=123\",\n    \"digital_account_reference_number\": \"pan:5234568000001234\",\n    \"sender\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"date_of_birth\": \"1999-12-30\",\n      \"address\": {\n        \"line1\": \"123 Elm St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"OFallon\",\n        \"country_subdivision\": \"IL\",\n        \"postal_code\": \"60618\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\"\n    },\n    \"additional_message\": \"DEV123456\",\n    \"funding_source\": \"DEBIT\",\n    \"participation_id\": \"TERMINAL34728\",\n    \"recipient_account_uri\": \"pan:5299920210000277;exp=2077-08;cvc=123\",\n    \"recipient\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"address\": {\n        \"line1\": \"435 Tucker St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"St. Louis\",\n        \"country_subdivision\": \"MO\",\n        \"postal_code\": \"63368\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\",\n      \"additional_merchant_data\": {\n        \"payment_facilitator_id\": \"123456\",\n        \"sub_merchant_id\": \"A1234\"\n      },\n      \"merchant_category_code\": \"0763\"\n    },\n    \"payment_origination_country\": \"USA\",\n    \"reconciliation_data\": {\n      \"custom_field\": [\n        {\n          \"name\": \"TransactionID\",\n          \"value\": \"456FDWBS43\"\n        }\n      ]\n    },\n    \"channel\": \"WEB\",\n    \"device_id\": \"DEV123456\",\n    \"location\": \"state:MO\",\n    \"transaction_local_date_time\": \"2016-09-22T13:22:11-05:30\",\n    \"participant\": {\n      \"card_acceptor_id\": \"CardAcceptor1\",\n      \"card_acceptor_name\": \"THE BEST BANK\"\n    },\n    \"funding_transaction_reference\": {\n      \"network\": \"MASTERCARD\",\n      \"reference_number\": \"0000000000592087939\"\n    },\n    \"mastercard_assigned_id\": \"111111\",\n    \"routing_transit_number\": \"965730000\",\n    \"processor_id\": \"2147483647\",\n    \"token_cryptogram\": {\n      \"type\": \"CONTACTLESS_CHIP\",\n      \"value\": \"jjoutwsdgfdou124354ljlsdhgout968957\",\n      \"pan_sequence_number\": \"011\"\n    },\n    \"authentication_value\": \"ucaf: jJJLtQa+Iws8AREAEbjsA1MAAAA\",\n    \"qr_data\": \"Q1Q2Q3\",\n    \"convenience_amount\": \"11\",\n    \"convenience_indicator\": \"02\",\n    \"interchange_rate_designator\": \"QR\"\n  }\n}\n\n\n//Keystore password: keystorepassword\n//Key alias: keyalias\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox.api.mastercard.com/send/v1/partners/ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo/merchant/transfers/payment",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"mastercard",
+						"com"
+					],
+					"path": [
+						"send",
+						"v1",
+						"partners",
+						"ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo",
+						"merchant",
+						"transfers",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MTN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"merchant_payment_transfer\": {\n    \"transfer_reference\": \"PAYMENT123456\",\n    \"payment_type\": \"P2M\",\n    \"amount\": \"5300\",\n    \"currency\": \"USD\",\n    \"sender_account_uri\": \"pan:5299920000000149;exp=2022-08;cvc=123\",\n    \"digital_account_reference_number\": \"pan:5234568000001234\",\n    \"sender\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"date_of_birth\": \"1999-12-30\",\n      \"address\": {\n        \"line1\": \"123 Elm St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"OFallon\",\n        \"country_subdivision\": \"IL\",\n        \"postal_code\": \"60618\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\"\n    },\n    \"additional_message\": \"DEV123456\",\n    \"funding_source\": \"DEBIT\",\n    \"participation_id\": \"TERMINAL34728\",\n    \"recipient_account_uri\": \"pan:5299920210000277;exp=2077-08;cvc=123\",\n    \"recipient\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"address\": {\n        \"line1\": \"435 Tucker St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"St. Louis\",\n        \"country_subdivision\": \"MO\",\n        \"postal_code\": \"63368\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\",\n      \"additional_merchant_data\": {\n        \"payment_facilitator_id\": \"123456\",\n        \"sub_merchant_id\": \"A1234\"\n      },\n      \"merchant_category_code\": \"0763\"\n    },\n    \"payment_origination_country\": \"USA\",\n    \"reconciliation_data\": {\n      \"custom_field\": [\n        {\n          \"name\": \"TransactionID\",\n          \"value\": \"456FDWBS43\"\n        }\n      ]\n    },\n    \"channel\": \"WEB\",\n    \"device_id\": \"DEV123456\",\n    \"location\": \"state:MO\",\n    \"transaction_local_date_time\": \"2016-09-22T13:22:11-05:30\",\n    \"participant\": {\n      \"card_acceptor_id\": \"CardAcceptor1\",\n      \"card_acceptor_name\": \"THE BEST BANK\"\n    },\n    \"funding_transaction_reference\": {\n      \"network\": \"MASTERCARD\",\n      \"reference_number\": \"0000000000592087939\"\n    },\n    \"mastercard_assigned_id\": \"111111\",\n    \"routing_transit_number\": \"965730000\",\n    \"processor_id\": \"2147483647\",\n    \"token_cryptogram\": {\n      \"type\": \"CONTACTLESS_CHIP\",\n      \"value\": \"jjoutwsdgfdou124354ljlsdhgout968957\",\n      \"pan_sequence_number\": \"011\"\n    },\n    \"authentication_value\": \"ucaf: jJJLtQa+Iws8AREAEbjsA1MAAAA\",\n    \"qr_data\": \"Q1Q2Q3\",\n    \"convenience_amount\": \"11\",\n    \"convenience_indicator\": \"02\",\n    \"interchange_rate_designator\": \"QR\"\n  }\n}\n\n\n//Keystore password: keystorepassword\n//Key alias: keyalias\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox.api.mastercard.com/send/v1/partners/ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo/merchant/transfers/payment",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"mastercard",
+						"com"
+					],
+					"path": [
+						"send",
+						"v1",
+						"partners",
+						"ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo",
+						"merchant",
+						"transfers",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vodafone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"merchant_payment_transfer\": {\n    \"transfer_reference\": \"PAYMENT123456\",\n    \"payment_type\": \"P2M\",\n    \"amount\": \"5300\",\n    \"currency\": \"USD\",\n    \"sender_account_uri\": \"pan:5299920000000149;exp=2022-08;cvc=123\",\n    \"digital_account_reference_number\": \"pan:5234568000001234\",\n    \"sender\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"date_of_birth\": \"1999-12-30\",\n      \"address\": {\n        \"line1\": \"123 Elm St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"OFallon\",\n        \"country_subdivision\": \"IL\",\n        \"postal_code\": \"60618\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\"\n    },\n    \"additional_message\": \"DEV123456\",\n    \"funding_source\": \"DEBIT\",\n    \"participation_id\": \"TERMINAL34728\",\n    \"recipient_account_uri\": \"pan:5299920210000277;exp=2077-08;cvc=123\",\n    \"recipient\": {\n      \"first_name\": \"John\",\n      \"middle_name\": \"Tyler\",\n      \"last_name\": \"Jones\",\n      \"address\": {\n        \"line1\": \"435 Tucker St\",\n        \"line2\": \"Apartment 9\",\n        \"city\": \"St. Louis\",\n        \"country_subdivision\": \"MO\",\n        \"postal_code\": \"63368\",\n        \"country\": \"USA\"\n      },\n      \"phone\": \"12125551234\",\n      \"email\": \"jane.smith123@abcmail.com\",\n      \"additional_merchant_data\": {\n        \"payment_facilitator_id\": \"123456\",\n        \"sub_merchant_id\": \"A1234\"\n      },\n      \"merchant_category_code\": \"0763\"\n    },\n    \"payment_origination_country\": \"USA\",\n    \"reconciliation_data\": {\n      \"custom_field\": [\n        {\n          \"name\": \"TransactionID\",\n          \"value\": \"456FDWBS43\"\n        }\n      ]\n    },\n    \"channel\": \"WEB\",\n    \"device_id\": \"DEV123456\",\n    \"location\": \"state:MO\",\n    \"transaction_local_date_time\": \"2016-09-22T13:22:11-05:30\",\n    \"participant\": {\n      \"card_acceptor_id\": \"CardAcceptor1\",\n      \"card_acceptor_name\": \"THE BEST BANK\"\n    },\n    \"funding_transaction_reference\": {\n      \"network\": \"MASTERCARD\",\n      \"reference_number\": \"0000000000592087939\"\n    },\n    \"mastercard_assigned_id\": \"111111\",\n    \"routing_transit_number\": \"965730000\",\n    \"processor_id\": \"2147483647\",\n    \"token_cryptogram\": {\n      \"type\": \"CONTACTLESS_CHIP\",\n      \"value\": \"jjoutwsdgfdou124354ljlsdhgout968957\",\n      \"pan_sequence_number\": \"011\"\n    },\n    \"authentication_value\": \"ucaf: jJJLtQa+Iws8AREAEbjsA1MAAAA\",\n    \"qr_data\": \"Q1Q2Q3\",\n    \"convenience_amount\": \"11\",\n    \"convenience_indicator\": \"02\",\n    \"interchange_rate_designator\": \"QR\"\n  }\n}\n\n\n//Keystore password: keystorepassword\n//Key alias: keyalias\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox.api.mastercard.com/send/v1/partners/ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo/merchant/transfers/payment",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"mastercard",
+						"com"
+					],
+					"path": [
+						"send",
+						"v1",
+						"partners",
+						"ptnr_BEeCrYJHh2BXTXPy_PEtp-8DBOo",
+						"merchant",
+						"transfers",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "headerPrefix",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n            \"id\":             \"user1.id\",\n            \"username\":       \"user1.username\",\n            \"password\":       \"user1.password\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/authorization",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oidc",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "super_secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test_oauth_app",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF9vYXV0aF9hcHA6c3VwZXJfc2VjcmV0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scopes",
+							"value": "api",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "test_oauth_app",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "super_secret",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7000/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oidc Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scopes",
+							"value": "api",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7000/token/introspection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"token",
+						"introspection"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
